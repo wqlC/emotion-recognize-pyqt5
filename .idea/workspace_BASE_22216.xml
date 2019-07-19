@@ -1,18 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-<<<<<<< HEAD
     <list default="true" id="e93b0bd7-d4e6-4cfb-bd3b-46245da2b771" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pyqtSignal/sigslot.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
-    <ignored path=".idea/" />
-=======
-    <list default="true" id="e93b0bd7-d4e6-4cfb-bd3b-46245da2b771" name="Default Changelist" comment="" />
-    <ignored path=".idea/" />
-    <manually-removed-from-ignored>
-      <directory path="/" />
-    </manually-removed-from-ignored>
->>>>>>> refs/remotes/origin/master
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,45 +13,86 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/test1$timer.coverage" NAME="timer Coverage Results" MODIFIED="1562770346467" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/test1$test3.coverage" NAME="test3 Coverage Results" MODIFIED="1562768233560" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/emotionRecognize$test1__1_.coverage" NAME="test1 (1) Coverage Results" MODIFIED="1563454785057" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pyqtSignal" />
     <SUITE FILE_PATH="coverage/test1$test4.coverage" NAME="test4 Coverage Results" MODIFIED="1562770393151" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/test1$test1.coverage" NAME="test1 Coverage Results" MODIFIED="1560214066917" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/emotionRecognize$eventObject.coverage" NAME="eventObject Coverage Results" MODIFIED="1563457341407" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pyqtSignal" />
-    <SUITE FILE_PATH="coverage/emotionRecognize$escap.coverage" NAME="escap Coverage Results" MODIFIED="1563456577101" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pyqtSignal" />
     <SUITE FILE_PATH="coverage/test1$test2.coverage" NAME="test2 Coverage Results" MODIFIED="1562763238960" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/test1$test3.coverage" NAME="test3 Coverage Results" MODIFIED="1562768233560" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/emotionRecognize$test1__1_.coverage" NAME="test1 (1) Coverage Results" MODIFIED="1562856809175" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pyqtSignal" />
+    <SUITE FILE_PATH="coverage/test1$timer.coverage" NAME="timer Coverage Results" MODIFIED="1562770346467" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/emotion_recognize_pyqt5$sigslot.coverage" NAME="sigslot Coverage Results" MODIFIED="1563272288664" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pyqtSignal" />
+    <SUITE FILE_PATH="coverage/test1$test1.coverage" NAME="test1 Coverage Results" MODIFIED="1560214066917" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FUSProjectUsageTrigger">
-    <session id="1394767324">
+    <session id="200354336">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="3" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.12" value="1" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.opened" value="3" />
+        </counts>
+      </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="3" />
+          <entry key="html" value="1" />
+          <entry key="py" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="3" />
+          <entry key="HTML" value="1" />
+          <entry key="Python" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="1152" />
+          <entry key="html" value="74" />
+          <entry key="py" value="3601" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="1152" />
+          <entry key="HTML" value="74" />
+          <entry key="Python" value="3601" />
         </counts>
       </usages-collector>
+    </session>
+    <session id="1394767324">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-<<<<<<< HEAD
-          <entry key="project.closed" value="3" />
-          <entry key="project.open.time.4" value="2" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="py" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Python" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="py" value="7" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="Python" value="7" />
+        </counts>
+      </usages-collector>
+    </session>
+    <session id="-23639725">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -79,11 +113,6 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Python" value="516" />
-=======
-          <entry key="project.closed" value="1" />
-          <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="1" />
->>>>>>> refs/remotes/origin/master
         </counts>
       </usages-collector>
     </session>
@@ -93,11 +122,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
+            <state relative-caret-position="480">
               <caret line="23" column="34" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
-              <folding>
-                <marker date="1560160135375" expanded="true" signature="188:758" ph="..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -105,43 +131,19 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pyqtSignal/test1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="550">
-              <caret line="27" column="42" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pyqtSignal/sigslot.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pyqtSignal/eventObject.py">
-          <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state relative-caret-position="-55">
-              <caret line="25" column="22" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
-=======
-            <state relative-caret-position="418">
-              <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
->>>>>>> refs/remotes/origin/master
-              <folding>
-                <element signature="e#103#113#0" expanded="true" />
-                <marker date="1563457186129" expanded="true" signature="197:202" ph="..." />
-              </folding>
+            <state relative-caret-position="2088">
+              <caret line="89" selection-start-line="89" selection-end-line="89" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pyqtSignal/escap.py">
+        <entry file="file://$PROJECT_DIR$/pyqtSignal/sigslot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="682">
-              <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+            <state relative-caret-position="271">
+              <caret line="25" column="22" lean-forward="true" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
               <folding>
-                <element signature="e#57#67#0" expanded="true" />
-                <marker date="1563456577070" expanded="true" signature="151:156" ph="..." />
+                <element signature="e#108#118#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -150,12 +152,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
+            <state relative-caret-position="96">
               <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
-                <marker date="1562763238927" expanded="true" signature="116:121" ph="..." />
-                <marker date="1562763238927" expanded="true" signature="178:183" ph="..." />
               </folding>
             </state>
           </provider>
@@ -164,7 +164,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test3.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2288">
+            <state relative-caret-position="2496">
               <caret line="111" column="37" selection-start-line="111" selection-start-column="33" selection-end-line="111" selection-end-column="37" />
               <folding>
                 <element signature="e#42#52#0" expanded="true" />
@@ -181,12 +181,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/timer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="484">
+            <state relative-caret-position="528">
               <caret line="25" column="41" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
-                <marker date="1562770346381" expanded="true" signature="150:155" ph="..." />
-                <marker date="1562770346381" expanded="true" signature="499:674" ph="..." />
               </folding>
             </state>
           </provider>
@@ -197,18 +195,13 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
         <option value="Python Script" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="PUSH_TAGS">
-      <GitPushTagMode>
-        <option name="argument" value="--follow-tags" />
-        <option name="title" value="Current Branch" />
-      </GitPushTagMode>
-    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -221,8 +214,7 @@
         <option value="$PROJECT_DIR$/timer.py" />
         <option value="$PROJECT_DIR$/test4.py" />
         <option value="$PROJECT_DIR$/pyqtSignal/test1.py" />
-        <option value="$PROJECT_DIR$/pyqtSignal/escap.py" />
-        <option value="$PROJECT_DIR$/pyqtSignal/eventObject.py" />
+        <option value="$PROJECT_DIR$/pyqtSignal/sigslot.py" />
       </list>
     </option>
   </component>
@@ -234,45 +226,40 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="960" />
-    <option name="y" value="27" />
+    <option name="y" value="25" />
     <option name="width" value="950" />
-    <option name="height" value="1053" />
+    <option name="height" value="1055" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="emotionRecognize" type="b2602c69:ProjectViewProjectNode" />
-              <item name="emotionRecognize" type="462c0819:PsiDirectoryNode" />
+              <item name="emotion-recognize-pyqt5" type="b2602c69:ProjectViewProjectNode" />
+              <item name="emotion-recognize-pyqt5" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="emotionRecognize" type="b2602c69:ProjectViewProjectNode" />
-              <item name="emotionRecognize" type="462c0819:PsiDirectoryNode" />
+              <item name="emotion-recognize-pyqt5" type="b2602c69:ProjectViewProjectNode" />
+              <item name="emotion-recognize-pyqt5" type="462c0819:PsiDirectoryNode" />
               <item name="pyqtSignal" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-<<<<<<< HEAD
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.idea" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-=======
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/pyqtSignal" />
->>>>>>> refs/remotes/origin/master
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Ignored.Files" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -286,8 +273,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.eventObject">
-    <configuration name="escap" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.sigslot">
+    <configuration name="sigslot" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="test1" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -300,29 +287,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pyqtSignal/escap.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="eventObject" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="test1" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pyqtSignal" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pyqtSignal/eventObject.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pyqtSignal/sigslot.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -345,6 +310,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pyqtSignal/test1.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test3" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="test1" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test3.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -398,19 +385,19 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Python.test3" />
       <item itemvalue="Python.test4" />
       <item itemvalue="Python.timer" />
       <item itemvalue="Python.test1 (1)" />
-      <item itemvalue="Python.escap" />
-      <item itemvalue="Python.eventObject" />
+      <item itemvalue="Python.sigslot" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.eventObject" />
-        <item itemvalue="Python.escap" />
+        <item itemvalue="Python.sigslot" />
         <item itemvalue="Python.test1 (1)" />
         <item itemvalue="Python.test4" />
         <item itemvalue="Python.timer" />
+        <item itemvalue="Python.test3" />
       </list>
     </recent_temporary>
   </component>
@@ -427,36 +414,34 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-<<<<<<< HEAD
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27144772" />
-=======
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26307365" />
->>>>>>> refs/remotes/origin/master
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2680965" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32896176" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32765958" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32897604" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32896176" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-<<<<<<< HEAD
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5013405" side_tool="true" visible="true" weight="0.32624114" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49932975" weight="0.32765958" />
-      <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.49865952" weight="0.32719547" />
-=======
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32896176" />
-      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32897604" />
->>>>>>> refs/remotes/origin/master
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.32765958" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32765958" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -471,41 +456,41 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/test2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test4.py" />
     <entry file="file://$PROJECT_DIR$/test1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
+        <state relative-caret-position="480">
           <caret line="23" column="34" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
-          <folding>
-            <marker date="1560160135375" expanded="true" signature="188:758" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pyqtSignal/test1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="27" column="42" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
+        <state relative-caret-position="2088">
+          <caret line="89" selection-start-line="89" selection-end-line="89" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pyqtSignal/sigslot.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/test2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
+        <state relative-caret-position="96">
           <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1562763238927" expanded="true" signature="116:121" ph="..." />
-            <marker date="1562763238927" expanded="true" signature="178:183" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test3.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2288">
+        <state relative-caret-position="2496">
           <caret line="111" column="37" selection-start-line="111" selection-start-column="33" selection-end-line="111" selection-end-column="37" />
           <folding>
             <element signature="e#42#52#0" expanded="true" />
@@ -518,39 +503,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/timer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
+        <state relative-caret-position="528">
           <caret line="25" column="41" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1562770346381" expanded="true" signature="150:155" ph="..." />
-            <marker date="1562770346381" expanded="true" signature="499:674" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pyqtSignal/eventObject.py">
+    <entry file="file://$PROJECT_DIR$/pyqtSignal/sigslot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        <state relative-caret-position="271">
+          <caret line="25" column="22" lean-forward="true" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
           <folding>
-            <element signature="e#103#113#0" expanded="true" />
-            <marker date="1563457186129" expanded="true" signature="197:202" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pyqtSignal/escap.py">
-      <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="-55">
-          <caret line="25" column="22" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
-=======
-        <state relative-caret-position="682">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
->>>>>>> refs/remotes/origin/master
-          <folding>
-            <element signature="e#57#67#0" expanded="true" />
-            <marker date="1563456577070" expanded="true" signature="151:156" ph="..." />
+            <element signature="e#108#118#0" expanded="true" />
           </folding>
         </state>
       </provider>

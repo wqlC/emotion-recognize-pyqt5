@@ -59,14 +59,16 @@ class Window(QWidget):
         self.setWindowTitle("人脸识别软件")
 
         # 拍照识别
-        self.btn_photo.clicked.connect(self.btn_video_capture)
+        self.btn_photo.clicked.connect(self.btn_photo_capture)
         # 实时识别
         self.btn_video.clicked.connect(self.btn_video_capture)
 
     def btn_open_cam(self):
         camera_record = CameraRecord()
-        image_data = camera_record.image_data
+        # TODO
+        camera_record.image_data.connect(self.show_image)
 
+    def show_image(self, image_data):
         height, width, colors = image_data.shape
         bytesPerLine = colors * width
         # 变换彩色空间
