@@ -64,11 +64,11 @@ class Window(QWidget):
         self.btn_video.clicked.connect(self.btn_video_capture)
 
     def btn_open_cam(self):
-        camera_record = CameraRecord()
+        self.camera_record = CameraRecord()
         # TODO
-        camera_record.image_data.connect(self.show_image)
+        self.camera_record.image_data.connect(self.show_main_image)
 
-    def show_image(self, image_data):
+    def show_main_image(self, image_data):
         height, width, colors = image_data.shape
         bytesPerLine = colors * width
         # 变换彩色空间
@@ -87,9 +87,37 @@ class Window(QWidget):
         pass
 
     def btn_photo_capture(self):
+        self.camera_record.image_data.connect(self.show_capture_image)
+        pass
+
+    def show_capture_image(self, image_data):
+        # TODO resize the image
+        height, width, colors = image_data.shape
+        bytesPerLine = colors * width
+        # 变换彩色空间
+        cv2.cvtColor(image_data, cv2.COLOR_BGR2RGB, image_data)
+
+        #转换为Qimage
+        image = QImage(
+            image_data.data,
+            width,
+            height,
+            bytesPerLine,
+            QImage.Format_RGB888
+        )
+
+        self.label_capture.setPixmap(QPixmap.fromImage(image))
         pass
 
     def btn_video_capture(self):
+        # TODO 设置一个计时器，用于定时捕获人脸，显示。
+        if self.btn_video.text() == u'实时识别':
+            self.btn_photo.setEnabled(False)
+            self.btn_video.setText(u'停止识别')
+        else:
+            self.btn_photo.setEnabled(True)
+            # TODO 结束实时识别过程
+            self.btn_video.setText(u'实时识别')
         pass
 
     def emotion_recognition(self, picture):
@@ -102,9 +130,8 @@ class CameraRecord(QWidget):
     def __init__(self, camera_port=0):
         super().__init__()
         self.camera = cv2.VideoCapture(camera_port)
-
         self.timer = QBasicTimer()
-        self.timer.start(1000, self)
+        self.timer.start(0, self)
 
     def timerEvent(self, QTimerEvent):
         if QTimerEvent.timerId() != self.timer.timerId():
