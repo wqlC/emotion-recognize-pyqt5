@@ -9,7 +9,7 @@ import time
 import numpy as np
 import cv2
 
-from PyQt5.QtCore import pyqtSignal, QBasicTimer
+from PyQt5.QtCore import pyqtSignal, QBasicTimer, Qt
 from PyQt5.QtGui import QPixmap, QImage
 from PyQt5.QtWidgets import *
 
@@ -66,6 +66,9 @@ class Window(QWidget):
         self.btn_video.clicked.connect(self.btn_video_capture)
         self.video_timer = QBasicTimer()
 
+        # 退出
+        self.btn_quit.clicked.connect(self.closeApp)
+
     def btn_open_cam(self):
         self.camera_record = CameraRecord()
         # TODO
@@ -86,8 +89,8 @@ class Window(QWidget):
             bytesPerLine,
             QImage.Format_RGB888
         )
-
-        self.label_show_camera.setPixmap(QPixmap.fromImage(image))
+        pixmap = QPixmap.fromImage(image)
+        self.label_show_camera.setPixmap(pixmap.scaled(800, 600, Qt.KeepAspectRatio))
         pass
 
     def btn_photo_capture(self):
@@ -110,7 +113,8 @@ class Window(QWidget):
             QImage.Format_RGB888
         )
 
-        self.label_capture.setPixmap(QPixmap.fromImage(image))
+        pixmap = QPixmap.fromImage(image)
+        self.label_capture.setPixmap(pixmap.scaled(100, 75, Qt.KeepAspectRatio))
         self.emotion_recognition(image_data)
         pass
 
@@ -119,7 +123,7 @@ class Window(QWidget):
         if self.btn_video.text() == u'实时识别':
             self.btn_photo.setEnabled(False)
             self.btn_video.setText(u'停止识别')
-            print('开始自动捕获')
+            # print('开始自动捕获')
             self.video_timer.start(1000, self)
         else:
             self.video_timer.stop()
@@ -135,12 +139,18 @@ class Window(QWidget):
         :return:
         '''
         cv2.imwrite(str(int(time.time())) + '.jpg', picture)
+        self.text.setText('红红火火恍恍惚惚')
         pass
 
     def timerEvent(self, QTimeEvent):
         if QTimeEvent.timerId() == self.video_timer.timerId():
-            print('video_timer_id: {}'.format(self.video_timer.timerId()))
+            # print('video_timer_id: {}'.format(self.video_timer.timerId()))
             self.show_capture_image(self.main_image)
+
+    def closeApp(self):
+        self.camera_record.camera.release()
+        cv2.destroyAllWindows()
+        self.close()
 
 
 class CameraRecord(QWidget):
