@@ -4,6 +4,8 @@ emotion recognize
 TODO: signal and slot
 '''
 import sys
+import time
+
 import numpy as np
 import cv2
 
@@ -62,6 +64,7 @@ class Window(QWidget):
         self.btn_photo.clicked.connect(self.btn_photo_capture)
         # 实时识别
         self.btn_video.clicked.connect(self.btn_video_capture)
+        self.video_timer = QBasicTimer()
 
     def btn_open_cam(self):
         self.camera_record = CameraRecord()
@@ -69,6 +72,7 @@ class Window(QWidget):
         self.camera_record.image_data.connect(self.show_main_image)
 
     def show_main_image(self, image_data):
+        self.main_image = image_data
         height, width, colors = image_data.shape
         bytesPerLine = colors * width
         # 变换彩色空间
@@ -87,7 +91,7 @@ class Window(QWidget):
         pass
 
     def btn_photo_capture(self):
-        self.camera_record.image_data.connect(self.show_capture_image)
+        self.show_capture_image(self.main_image)
         pass
 
     def show_capture_image(self, image_data):
@@ -107,6 +111,7 @@ class Window(QWidget):
         )
 
         self.label_capture.setPixmap(QPixmap.fromImage(image))
+        self.emotion_recognition(image_data)
         pass
 
     def btn_video_capture(self):
@@ -114,14 +119,29 @@ class Window(QWidget):
         if self.btn_video.text() == u'实时识别':
             self.btn_photo.setEnabled(False)
             self.btn_video.setText(u'停止识别')
+            print('开始自动捕获')
+            self.video_timer.start(1000, self)
         else:
+            self.video_timer.stop()
+            print('结束自动捕获')
             self.btn_photo.setEnabled(True)
-            # TODO 结束实时识别过程
             self.btn_video.setText(u'实时识别')
         pass
 
     def emotion_recognition(self, picture):
+        '''
+
+        :param picture:
+        :return:
+        '''
+        cv2.imwrite(str(int(time.time())) + '.jpg', picture)
         pass
+
+    def timerEvent(self, QTimeEvent):
+        if QTimeEvent.timerId() == self.video_timer.timerId():
+            print('video_timer_id: {}'.format(self.video_timer.timerId()))
+            self.show_capture_image(self.main_image)
+
 
 class CameraRecord(QWidget):
 
