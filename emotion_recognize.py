@@ -1,7 +1,7 @@
 '''
 emotion recognize
 
-TODO: signal and slot
+# TODO train a model and input the image data to recognize the emotion
 '''
 import sys
 import time
@@ -74,6 +74,7 @@ class Window(QWidget):
         self.camera_record.image_data.connect(self.show_main_image)
 
     def show_main_image(self, image_data):
+        self.main_image = image_data
         image = self.image2Qimage(image_data)
         pixmap = QPixmap.fromImage(image)
 
@@ -117,7 +118,7 @@ class Window(QWidget):
             self.btn_photo.setEnabled(False)
             self.btn_video.setText(u'停止识别')
             # print('开始自动捕获')
-            self.video_timer.start(1000, self)
+            self.video_timer.start(500, self)
         else:
             self.video_timer.stop()
             # print('结束自动捕获')
@@ -131,8 +132,9 @@ class Window(QWidget):
         :param picture:
         :return:
         '''
-        cv2.imwrite(str(int(time.time())) + '.jpg', picture)
-        self.text.setText('红红火火恍恍惚惚')
+        picture_name = str(int(time.time())) + '.jpg'
+        cv2.imwrite(picture_name, picture)
+        self.text.setText(picture_name)
         pass
 
     def timerEvent(self, QTimeEvent):
@@ -141,6 +143,8 @@ class Window(QWidget):
             self.show_capture_image(self.main_image)
 
     def closeApp(self):
+        if self.btn_video.text() == u'停止识别':
+            self.video_timer.stop()
         self.camera_record.camera.release()
         cv2.destroyAllWindows()
         self.close()
