@@ -75,21 +75,10 @@ class Window(QWidget):
         self.camera_record.image_data.connect(self.show_main_image)
 
     def show_main_image(self, image_data):
-        self.main_image = image_data
-        height, width, colors = image_data.shape
-        bytesPerLine = colors * width
-        # 变换彩色空间
-        cv2.cvtColor(image_data, cv2.COLOR_BGR2RGB, image_data)
-
-        #转换为Qimage
-        image = QImage(
-            image_data.data,
-            width,
-            height,
-            bytesPerLine,
-            QImage.Format_RGB888
-        )
+        image = self.image2Qimage(image_data)
         pixmap = QPixmap.fromImage(image)
+
+        # pixmap.scaled(): resize the image
         self.label_show_camera.setPixmap(pixmap.scaled(800, 600, Qt.KeepAspectRatio))
         pass
 
@@ -97,14 +86,13 @@ class Window(QWidget):
         self.show_capture_image(self.main_image)
         pass
 
-    def show_capture_image(self, image_data):
-
+    def image2Qimage(self, image_data):
         height, width, colors = image_data.shape
         bytesPerLine = colors * width
         # 变换彩色空间
         cv2.cvtColor(image_data, cv2.COLOR_BGR2RGB, image_data)
 
-        #转换为Qimage
+        # 转换为Qimage
         image = QImage(
             image_data.data,
             width,
@@ -112,6 +100,11 @@ class Window(QWidget):
             bytesPerLine,
             QImage.Format_RGB888
         )
+        return image
+
+    def show_capture_image(self, image_data):
+
+        image = self.image2Qimage(image_data)
 
         pixmap = QPixmap.fromImage(image)
         # pixmap.scaled(): resize the image
