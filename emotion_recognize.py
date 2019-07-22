@@ -71,7 +71,6 @@ class Window(QWidget):
 
     def btn_open_cam(self):
         self.camera_record = CameraRecord()
-        # TODO
         self.camera_record.image_data.connect(self.show_main_image)
 
     def show_main_image(self, image_data):
