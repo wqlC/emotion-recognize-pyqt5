@@ -1,0 +1,2 @@
+pip3 install --user PyQt5
+pip3 install --user opencv-python
