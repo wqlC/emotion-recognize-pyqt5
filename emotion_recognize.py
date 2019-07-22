@@ -98,7 +98,7 @@ class Window(QWidget):
         pass
 
     def show_capture_image(self, image_data):
-        # TODO resize the image
+
         height, width, colors = image_data.shape
         bytesPerLine = colors * width
         # 变换彩色空间
@@ -114,12 +114,13 @@ class Window(QWidget):
         )
 
         pixmap = QPixmap.fromImage(image)
+        # pixmap.scaled(): resize the image
         self.label_capture.setPixmap(pixmap.scaled(100, 75, Qt.KeepAspectRatio))
         self.emotion_recognition(image_data)
         pass
 
     def btn_video_capture(self):
-        # TODO 设置一个计时器，用于定时捕获人脸，显示。
+        # 设置一个计时器，用于定时捕获人脸，显示。
         if self.btn_video.text() == u'实时识别':
             self.btn_photo.setEnabled(False)
             self.btn_video.setText(u'停止识别')
@@ -127,7 +128,7 @@ class Window(QWidget):
             self.video_timer.start(1000, self)
         else:
             self.video_timer.stop()
-            print('结束自动捕获')
+            # print('结束自动捕获')
             self.btn_photo.setEnabled(True)
             self.btn_video.setText(u'实时识别')
         pass
