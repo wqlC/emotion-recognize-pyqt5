@@ -1,13 +1,15 @@
 '''
 emotion recognize
 
-TODO: signal and slot
+# TODO train a model and input the image data to recognize the emotion
 '''
 import sys
+import time
+
 import numpy as np
 import cv2
 
-from PyQt5.QtCore import pyqtSignal, QBasicTimer
+from PyQt5.QtCore import pyqtSignal, QBasicTimer, Qt
 from PyQt5.QtGui import QPixmap, QImage
 from PyQt5.QtWidgets import *
 
@@ -59,20 +61,38 @@ class Window(QWidget):
         self.setWindowTitle("人脸识别软件")
 
         # 拍照识别
-        self.btn_photo.clicked.connect(self.btn_video_capture)
+        self.btn_photo.clicked.connect(self.btn_photo_capture)
         # 实时识别
         self.btn_video.clicked.connect(self.btn_video_capture)
+        self.video_timer = QBasicTimer()
+
+        # 退出
+        self.btn_quit.clicked.connect(self.closeApp)
 
     def btn_open_cam(self):
-        camera_record = CameraRecord()
-        image_data = camera_record.image_data
+        self.camera_record = CameraRecord()
+        self.camera_record.image_data.connect(self.show_main_image)
 
+    def show_main_image(self, image_data):
+        self.main_image = image_data
+        image = self.image2Qimage(image_data)
+        pixmap = QPixmap.fromImage(image)
+
+        # pixmap.scaled(): resize the image
+        self.label_show_camera.setPixmap(pixmap.scaled(800, 600, Qt.KeepAspectRatio))
+        pass
+
+    def btn_photo_capture(self):
+        self.show_capture_image(self.main_image)
+        pass
+
+    def image2Qimage(self, image_data):
         height, width, colors = image_data.shape
         bytesPerLine = colors * width
         # 变换彩色空间
         cv2.cvtColor(image_data, cv2.COLOR_BGR2RGB, image_data)
 
-        #转换为Qimage
+        # 转换为Qimage
         image = QImage(
             image_data.data,
             width,
@@ -80,18 +100,55 @@ class Window(QWidget):
             bytesPerLine,
             QImage.Format_RGB888
         )
+        return image
 
-        self.label_show_camera.setPixmap(QPixmap.fromImage(image))
-        pass
+    def show_capture_image(self, image_data):
 
-    def btn_photo_capture(self):
+        image = self.image2Qimage(image_data)
+
+        pixmap = QPixmap.fromImage(image)
+        # pixmap.scaled(): resize the image
+        self.label_capture.setPixmap(pixmap.scaled(100, 75, Qt.KeepAspectRatio))
+        self.emotion_recognition(image_data)
         pass
 
     def btn_video_capture(self):
+        # 设置一个计时器，用于定时捕获人脸，显示。
+        if self.btn_video.text() == u'实时识别':
+            self.btn_photo.setEnabled(False)
+            self.btn_video.setText(u'停止识别')
+            # print('开始自动捕获')
+            self.video_timer.start(500, self)
+        else:
+            self.video_timer.stop()
+            # print('结束自动捕获')
+            self.btn_photo.setEnabled(True)
+            self.btn_video.setText(u'实时识别')
         pass
 
     def emotion_recognition(self, picture):
+        '''
+
+        :param picture:
+        :return:
+        '''
+        picture_name = str(int(time.time())) + '.jpg'
+        cv2.imwrite(picture_name, picture)
+        self.text.setText(picture_name)
         pass
+
+    def timerEvent(self, QTimeEvent):
+        if QTimeEvent.timerId() == self.video_timer.timerId():
+            # print('video_timer_id: {}'.format(self.video_timer.timerId()))
+            self.show_capture_image(self.main_image)
+
+    def closeApp(self):
+        if self.btn_video.text() == u'停止识别':
+            self.video_timer.stop()
+        self.camera_record.camera.release()
+        cv2.destroyAllWindows()
+        self.close()
+
 
 class CameraRecord(QWidget):
 
@@ -100,9 +157,8 @@ class CameraRecord(QWidget):
     def __init__(self, camera_port=0):
         super().__init__()
         self.camera = cv2.VideoCapture(camera_port)
-
         self.timer = QBasicTimer()
-        self.timer.start(1000, self)
+        self.timer.start(0, self)
 
     def timerEvent(self, QTimerEvent):
         if QTimerEvent.timerId() != self.timer.timerId():
