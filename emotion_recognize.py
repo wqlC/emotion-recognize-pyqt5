@@ -132,7 +132,6 @@ class Window(QWidget):
         :param picture:
         :return:
         '''
-        print('the type of picture is: {0}\nthe shape of picture is:{1}\n'.format(type(picture), picture.shape()))
         picture_name = str(int(time.time())) + '.jpg'
         cv2.imwrite(picture_name, picture)
         self.text.setText(picture_name)
