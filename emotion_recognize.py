@@ -87,6 +87,7 @@ class Window(QWidget):
         pass
 
     def image2Qimage(self, image_data):
+        image_data = self.rectanglt(image_data)
         height, width, colors = image_data.shape
         bytesPerLine = colors * width
         # 变换彩色空间
@@ -101,6 +102,25 @@ class Window(QWidget):
             QImage.Format_RGB888
         )
         return image
+
+    def rectanglt(self, image_data):
+        # 画方框
+        cascPath = "haarcascade_frontalface_alt.xml"
+        faceCascade = cv2.CascadeClassifier(cascPath)
+        gray = cv2.cvtColor(image_data, cv2.COLOR_BGR2GRAY)
+
+        # Detect faces in the image
+        faces = faceCascade.detectMultiScale(
+            gray,
+            scaleFactor=1.1,
+            minNeighbors=5,
+            minSize=(30, 30),
+            flags=cv2.CASCADE_SCALE_IMAGE
+        )
+        for (x, y, w, h) in faces:
+            cv2.rectangle(image_data, (x, y), (x + w, y + h), (0, 255, 0), 2)
+
+        return image_data
 
     def show_capture_image(self, image_data):
 
