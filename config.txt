@@ -1,2 +1,5 @@
 pip3 install --user PyQt5
 pip3 install --user opencv-python
+pip3 install --user sklearn
+pip3 install --user scikit-image
+pip3 install --user Pillow

@@ -13,6 +13,8 @@ from PyQt5.QtCore import pyqtSignal, QBasicTimer, Qt
 from PyQt5.QtGui import QPixmap, QImage
 from PyQt5.QtWidgets import *
 
+import EmotionRecognition as eg
+
 class Window(QWidget):
     def __init__(self):
         super().__init__()
@@ -20,6 +22,8 @@ class Window(QWidget):
 
         #打开相机
         self.btn_open_cam()
+
+        self.emotionRecognition = eg.EmotionRecognition()
 
     def set_ui(self):
         # 布局设置
@@ -132,9 +136,10 @@ class Window(QWidget):
         :param picture:
         :return:
         '''
-        picture_name = str(int(time.time())) + '.jpg'
-        cv2.imwrite(picture_name, picture)
-        self.text.setText(picture_name)
+        # picture_name = str(int(time.time())) + '.jpg'
+        # cv2.imwrite(picture_name, picture)
+        emotion_str = self.emotionRecognition.clf_emotion(picture)
+        self.text.setText(emotion_str)
 
         pass
 
@@ -167,6 +172,7 @@ class CameraRecord(QWidget):
         read, data = self.camera.read()
         if read:
             self.image_data.emit(data)
+
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
