@@ -1,11 +1,7 @@
 '''
 emotion recognize
-
-# TODO train a model and input the image data to recognize the emotion
 '''
 import sys
-import time
-
 import numpy as np
 import cv2
 
