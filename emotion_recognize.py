@@ -1,17 +1,15 @@
 '''
 emotion recognize
-
-# TODO train a model and input the image data to recognize the emotion
 '''
 import sys
-import time
-
 import numpy as np
 import cv2
 
 from PyQt5.QtCore import pyqtSignal, QBasicTimer, Qt
 from PyQt5.QtGui import QPixmap, QImage
 from PyQt5.QtWidgets import *
+
+import EmotionRecognition as eg
 
 class Window(QWidget):
     def __init__(self):
@@ -20,6 +18,8 @@ class Window(QWidget):
 
         #打开相机
         self.btn_open_cam()
+
+        self.emotionRecognition = eg.EmotionRecognition()
 
     def set_ui(self):
         # 布局设置
@@ -87,6 +87,7 @@ class Window(QWidget):
         pass
 
     def image2Qimage(self, image_data):
+        image_data = self.rectanglt(image_data)
         height, width, colors = image_data.shape
         bytesPerLine = colors * width
         # 变换彩色空间
@@ -101,6 +102,25 @@ class Window(QWidget):
             QImage.Format_RGB888
         )
         return image
+
+    def rectanglt(self, image_data):
+        # 画方框
+        cascPath = "haarcascade_frontalface_alt.xml"
+        faceCascade = cv2.CascadeClassifier(cascPath)
+        gray = cv2.cvtColor(image_data, cv2.COLOR_BGR2GRAY)
+
+        # Detect faces in the image
+        faces = faceCascade.detectMultiScale(
+            gray,
+            scaleFactor=1.1,
+            minNeighbors=5,
+            minSize=(30, 30),
+            flags=cv2.CASCADE_SCALE_IMAGE
+        )
+        for (x, y, w, h) in faces:
+            cv2.rectangle(image_data, (x, y), (x + w, y + h), (0, 255, 0), 2)
+
+        return image_data
 
     def show_capture_image(self, image_data):
 
@@ -132,9 +152,11 @@ class Window(QWidget):
         :param picture:
         :return:
         '''
-        picture_name = str(int(time.time())) + '.jpg'
-        cv2.imwrite(picture_name, picture)
-        self.text.setText(picture_name)
+        # picture_name = str(int(time.time())) + '.jpg'
+        # cv2.imwrite(picture_name, picture)
+        emotion_str = self.emotionRecognition.clf_emotion(picture)
+        self.text.setText(emotion_str)
+
         pass
 
     def timerEvent(self, QTimeEvent):
@@ -166,6 +188,7 @@ class CameraRecord(QWidget):
         read, data = self.camera.read()
         if read:
             self.image_data.emit(data)
+
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
